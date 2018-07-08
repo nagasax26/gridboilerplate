@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: #dbdbdb; }
+  .row:not(:last-child) {
+    margin-bottom: 2rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 2rem; }
+  .row .col-1-of-12 {
+    width: calc(((100% - (12 - 1) * 2rem) / 12)); }
+  .row .col-2-of-12 {
+    width: calc(2 * ((100% - (12 - 1) * 2rem) / 12) + (2 - 1) * 2rem); }
+  .row .col-3-of-12 {
+    width: calc(3 * ((100% - (12 - 1) * 2rem) / 12) + (3 - 1) * 2rem); }
+  .row .col-4-of-12 {
+    width: calc(4 * ((100% - (12 - 1) * 2rem) / 12) + (4 - 1) * 2rem); }
+  .row .col-5-of-12 {
+    width: calc(5 * ((100% - (12 - 1) * 2rem) / 12) + (5 - 1) * 2rem); }
+  .row .col-6-of-12 {
+    width: calc(6 * ((100% - (12 - 1) * 2rem) / 12) + (6 - 1) * 2rem); }
+  .row .col-7-of-12 {
+    width: calc(7 * ((100% - (12 - 1) * 2rem) / 12) + (7 - 1) * 2rem); }
+  .row .col-8-of-12 {
+    width: calc(8 * ((100% - (12 - 1) * 2rem) / 12) + (8 - 1) * 2rem); }
+  .row .col-9-of-12 {
+    width: calc(9 * ((100% - (12 - 1) * 2rem) / 12) + (9 - 1) * 2rem); }
+  .row .col-10-of-12 {
+    width: calc(10 * ((100% - (12 - 1) * 2rem) / 12) + (10 - 1) * 2rem); }
+  .row .col-11-of-12 {
+    width: calc(11 * ((100% - (12 - 1) * 2rem) / 12) + (11 - 1) * 2rem); }
+
+.box {
+  padding: 5px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  height: 100%; }

@@ -1,0 +1,18 @@
+{
+  "name": "gridboilerplate",
+  "version": "1.0.0",
+  "description": "Template Grid for anay columns size",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss style.css -w",
+    "dev": "live-server",
+    "start": "npm-run-all --parallel watch:sass dev"
+  },
+  "author": "Nagasa Asafa",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.1",
+    "npm-run-all": "^4.1.3"
+  }
+}

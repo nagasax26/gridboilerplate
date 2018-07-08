@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px (10px/16px) * 100 = 62.5% 16px is the deafult font size in the browser
+}
+
+body {
+    box-sizing: border-box;
+}
+
+// VARABIABLE FOR GRID
+$grid-width:114rem;
+$gutter-vertical:2rem;
+$gutter-horizontal:2rem;
+// This function is modular, you can create 
+// any grid column template size
+// Example Grid with 8 column size we difine like this
+// col-width(1, 8) => the 8 is the column size and 1
+// is how much 1 equale in 8 column size
+@function col-width($number, $col-template) {
+    @if $number==1 {
+        @return calc(((100% - (#{$col-template} - 1) * #{$gutter-horizontal}) / #{$col-template}));
+    }
+    @else {
+        @return calc(#{$number} * ((100% - (#{$col-template} - 1) * #{$gutter-horizontal}) / #{$col-template}) + (#{$number} - 1) * #{$gutter-horizontal});
+    }
+}
